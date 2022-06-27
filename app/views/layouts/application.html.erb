@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>RSNew</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+<head>
+  <title>Myapp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= audio_tag "1.mp3", id: "sound", class: "audio-to-play", autoplay: true %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+</head>
 
-  <body>
+<body>
+
+<div class="container-fluid container-background">
+  <div class="container">
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="http://localhost:3000/#">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/pages/about">О нас</a>
+      </li>
+    </ul>
+
     <%= yield %>
-  </body>
+  </div>
+</div>
+</body>
 </html>
