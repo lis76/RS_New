@@ -1,4 +1,7 @@
-$card-bg: rgba(255,255,255, 0.4);
+$card-title-spacer-y: 1rem;
+$card-bg: rgba(255, 255, 255, 0.7);
+$card-color: rgba(0, 0, 0, 1);
+
 @import "bootstrap";
   .container-background {
     width: 100%;
@@ -7,5 +10,9 @@ $card-bg: rgba(255,255,255, 0.4);
     background-image: url(image_path("background.jpg"));
   }
 .card-landing {
-  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bg-dark {
+  --bs-bg-opacity: 1;
 }

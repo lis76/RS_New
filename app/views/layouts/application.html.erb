@@ -7,25 +7,29 @@
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
-  <%= audio_tag "1.mp3", id: "sound", class: "audio-to-play", autoplay: true %>
+
 
 </head>
 
 <body>
 
 <div class="container-fluid container-background">
-  <div class="container">
+  <div class="container-fluid container-background">
+    <button type="button" class="btn btn-light"><%= link_to "Главная", root_path %></button>
+    <button type="button" class="btn btn-warning"><%= link_to "О нас", pages_about_path %></button>
 
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="http://localhost:3000/#">Главная</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:3000/pages/about">О нас</a>
-      </li>
-    </ul>
+
 
     <%= yield %>
+
+    <%= audio_tag "1.mp3", id: "player", class: "audio-to-play" %>
+    <div>
+      <button onclick="document.getElementById('player').play()">Воспроизведение</button>
+      <button onclick="document.getElementById('player').pause()">Пауза</button>
+      <button onclick="document.getElementById('player').volume+=0.1">Громкость +</button>
+      <button onclick="document.getElementById('player').volume-=0.1">Громкость -</button>
+    </div>
+
   </div>
 </div>
 </body>

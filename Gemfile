@@ -7,6 +7,7 @@ ruby '3.1.2'
 
 gem 'bootsnap', require: false
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+gem 'devise'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'puma', '~> 5.0'
@@ -16,7 +17,6 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
 
 group :development do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
