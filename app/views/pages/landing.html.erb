@@ -1,9 +1,28 @@
-<div class="col-md-6">
-  <div class="h-100 p-5 text-white bg-dark rounded-3">
-    <h2><ya-tr-span >Присоединяйся</ya-tr-span></h2>
-    <p><ya-tr-span >Делитесь своими эмоциями.</ya-tr-span><br>
-      <ya-tr-span >Размещайте свои фотографии и подписывайтесь друг на друга.</ya-tr-span></p>
-    <button class="btn btn-outline-light" type="button"><%= link_to "Создать аккаунт", root_path %></button>
-    <button class="btn btn-outline-light" type="button"><%= link_to "Вход", pages_about_path %></button>
-  </div>
-</div>
+<% def user_signed_in?
+     # code here
+   end
+   if user_signed_in? %>
+
+<% else %>
+
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2><ya-tr-span >Присоединяйся</ya-tr-span></h2>
+          <p><ya-tr-span >Делитесь своими эмоциями.</ya-tr-span><br>
+            <ya-tr-span >Размещайте свои фотографии и подписывайтесь друг на друга.</ya-tr-span></p>
+          <button class="btn btn-outline-light" type="button">
+            <%= def new_user_registration_path
+                  # code here
+                end
+                link_to "Создать аккаунт", new_user_registration_path %>
+          </button>
+          <button class="btn btn-outline-light" type="button">
+            <%= def new_user_session_path
+                  # code here
+                end
+                link_to "Вход", new_user_session_path %>
+          </button>
+
+        </div>
+      </div>
+<% end %>
