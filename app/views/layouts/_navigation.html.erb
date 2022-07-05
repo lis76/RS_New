@@ -1,10 +1,13 @@
-<% if user_signed_in? %>
+<% def edit_user_registration_path
+     # code here
+   end
+   if user_signed_in? %>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><h3>Развлекайся</h3></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+   <a class="navbar-brand" href="#"><h3>Развлекайся</h3></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
@@ -12,7 +15,7 @@
                             <button type="button" class="btn btn-light"><%= link_to "Главная", root_path %></button>
                           </li>
                           <li class="nav-item">
-                            <button type="button" class="btn btn-warning"><%= link_to "О нас", pages_about_path %></button>
+                            <button type="button" class="btn btn-warning"><%= link_to current_user.email, edit_user_registration_path %></button>
                           </li>
                           <li class="nav-item">
                             <button type="button" class="btn btn-danger"><%= def destroy_user_session_path
