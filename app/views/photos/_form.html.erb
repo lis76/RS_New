@@ -1,6 +1,6 @@
 <%= form_with(model: photo) do |form| %>
   <% if photo.errors.any? %>
-    <div style="color: red">
+    <div class="mb-3" style="color: red">
       <h2><%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
 
       <ul>
@@ -17,6 +17,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

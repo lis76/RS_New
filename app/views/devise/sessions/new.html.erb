@@ -6,7 +6,6 @@
     <h5 class="card-title">Если вам нужно зарегистрироваться нажмите Зарегистрироваться ниже.</h5>
     <p class="card-text">Если Вы забыли пароль нажмите ниже Забыли пароль.</p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="mb-3">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>

@@ -1,9 +1,13 @@
-<h1>Новая фотография</h1>
+<div class="card photo-header">
 
+<h1>Новая фотография</h1>
+  <div class="card-body">
 <%= render "form", photo: @photo %>
 
 <br>
 
 <div>
   <%= link_to "Вернуться к фотографиям", photos_path, class: "btn btn-primary" %>
+</div>
+  </div>
 </div>
