@@ -1,0 +1,12 @@
+<h1>Мои фотографии</h1>
+
+<div id="photos">
+  <% @photos.each do |photo| %>
+    <%= render photo %>
+    <p>
+      <%= link_to "Посмотреть фотографию", photo, class: "btn btn-primary" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Добавить фотографию", new_photo_path, class: "btn btn-primary" %>
