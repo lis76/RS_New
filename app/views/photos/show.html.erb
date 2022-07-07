@@ -3,8 +3,9 @@
 <%= render @photo %>
 
 <div>
-  <%= link_to "Edit this photo", edit_photo_path(@photo) %> |
-  <%= link_to "Back to photos", photos_path %>
 
-  <%= button_to "1", @photo, method: :delete %>
+  <%= link_to "Редактировать фото", edit_photo_path(@photo) %> |
+  <%= link_to "Вернуться к фотографиям", photos_path %>
+
+  <%= button_to "Удалить фотографию", @photo, method: :delete %>
 </div>
