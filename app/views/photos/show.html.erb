@@ -4,8 +4,8 @@
 
 <div>
 
-  <%= button_to "Редактировать фото", edit_photo_path(@photo) %>
-  <%= button_to "Вернуться к фотографиям", photos_path %>
+  <%= link_to "Редактировать фото", edit_photo_path(@photo) %>
+  <%= link_to "Вернуться к фотографиям", photos_path %>
 <br>
   <%= button_to "Удалить фотографию", @photo, method: :delete %>
 </div><br><br>
