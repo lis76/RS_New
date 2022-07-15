@@ -48,14 +48,13 @@ class PhotosController < ApplicationController
 
   def authenticate_user!; end
 
-  def owner
-  end
+  def owner; end
 
   def set_photo
     @photo = Photo.find(params[:id])
   end
 
   def photo_params
-    params.require(:photo).permit(:description)
+    params.require(:photo).permit(:description, :image)
   end
 end
