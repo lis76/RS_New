@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
   root 'pages#landing'
   get 'pages/about'
+  get '/profiles/:id' => 'profiles#show', as: 'profile'
 end

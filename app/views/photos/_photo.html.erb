@@ -2,7 +2,7 @@
   <p>
     <strong>Description:</strong>
     <%= photo.description %>
-    <%= photo.user.email %>
+    <%= link_to photo.user.email, profile_path(photo.user_id) %>
   </p>
 
 </div>
