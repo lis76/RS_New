@@ -23,6 +23,16 @@
                                                                              end
                                                                              link_to "Выход", destroy_user_session_path %></button>
                           </li>
+
+                    <li class="nav-item">
+                      <button type="button" class="btn btn-light"><%= link_to "Мои фото", profiles_my_photos_path %></button>
+                    </li>
+                    <li class="nav-item">
+                      <button type="button" class="btn btn-light"><%= link_to "Мои подписки", profiles_subscribes_list_path %></button>
+                    </li>
+                    <li class="nav-item">
+                      <button type="button" class="btn btn-light"><%= link_to "Фото друзей", profiles_friends_photos_path %></button>
+                    </li>
                   </ul>
             </div>
     </div>

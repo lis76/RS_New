@@ -1,0 +1,16 @@
+<div class="col-md-6">
+  <div class="h-100 p-5 text-white bg-dark rounded-3">
+    <h1>Фотографии друзей</h1>
+
+    <div id="photos">
+      <% @photos.each do |photo| %>
+        <%= image_tag photo.image.url(:thumb) %>
+        <%= render photo %>
+        <p><br>
+          <%= link_to "Посмотреть фотографию", photo, class: "btn btn-primary" %>
+        </p>
+      <% end %>
+    </div>
+
+  </div>
+</div>

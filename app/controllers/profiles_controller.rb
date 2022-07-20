@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ProfilesController < ApplicationController
-  before_action :set_user
+  before_action :set_user, except: %i[my_photos subscribes_list friends_photos]
   def show; end
 
   def subscribe
@@ -37,10 +37,22 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def my_photos
+    @photos = current_user.photos.order('created_at DESC')
+  end
+
+  def subscribes_list
+    @friends = User.where(id: current_user.subscriptions.pluck(:friend_id))
+  end
+
+  def friends_photos
+    @photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id)).order('created_at DESC')
+  end
+
   private
 
   def set_user
     @user = User.find(params[:id])
   end
-
 end
+

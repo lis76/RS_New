@@ -1,0 +1,13 @@
+<div class="col-md-6">
+  <div class="h-100 p-5 text-white bg-dark rounded-3">
+    <h1>Мои подписки</h1>
+
+    <div id="photos">
+      <% @friends.each do |friend| %> |
+        <%= link_to friend.email, profile_path(friend.id) %>
+        <%= link_to "Отписаться", unsubscribe_profile_path(friend.id) %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
