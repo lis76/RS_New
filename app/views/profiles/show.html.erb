@@ -1,5 +1,14 @@
-<%= @user.id %>
 <%= @user.email %>
+
+<% if current_user.id == @user.id %>
+<% else %>
+
+<% if current_user.subscriptions.exists?(friend_id: @user.id) %>
+<%= link_to "Отписаться", unsubscribe_profile_path(@user) %>
+<% else %>
+  <%= link_to "Подписаться", subscribe_profile_path(@user) %>
+<% end %>
+  <% end %>
 <br>
 <div id="photos">
   <% @user.photos.each do |photo| %>
