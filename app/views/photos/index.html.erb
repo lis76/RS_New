@@ -10,6 +10,7 @@
       <%= link_to "Посмотреть фотографию", photo, class: "btn btn-primary" %>
     </p>
   <% end %>
+  <%= will_paginate @photos %>
 </div>
 
     <% if user_signed_in? %>
