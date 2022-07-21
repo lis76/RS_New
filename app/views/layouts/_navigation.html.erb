@@ -15,7 +15,7 @@
                             <button type="button" class="btn btn-light"><%= link_to "Главная", root_path %></button>
                           </li>
                           <li class="nav-item">
-                            <button type="button" class="btn btn-warning"><%= link_to current_user.email, edit_user_registration_path %></button>
+                            <button type="button" class="btn btn-warning"><%= link_to current_user.name, edit_user_registration_path %></button>
                           </li>
                           <li class="nav-item">
                             <button type="button" class="btn btn-danger"><%= def destroy_user_session_path
